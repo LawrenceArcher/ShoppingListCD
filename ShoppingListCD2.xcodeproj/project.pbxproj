@@ -11,6 +11,7 @@
 		EA10B2C828F3603F00C28E95 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA10B2C728F3603F00C28E95 /* ContentView.swift */; };
 		EA10B2CA28F3604100C28E95 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA10B2C928F3604100C28E95 /* Assets.xcassets */; };
 		EA10B2CD28F3604100C28E95 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA10B2CC28F3604100C28E95 /* Preview Assets.xcassets */; };
+		EA10B2D528F3612600C28E95 /* ShoppingList.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EA10B2D328F3612600C28E95 /* ShoppingList.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		EA10B2C728F3603F00C28E95 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		EA10B2C928F3604100C28E95 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EA10B2CC28F3604100C28E95 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		EA10B2D428F3612600C28E95 /* ShoppingList.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ShoppingList.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 			children = (
 				EA10B2C528F3603F00C28E95 /* ShoppingListCD2App.swift */,
 				EA10B2C728F3603F00C28E95 /* ContentView.swift */,
+				EA10B2D328F3612600C28E95 /* ShoppingList.xcdatamodeld */,
 				EA10B2C928F3604100C28E95 /* Assets.xcassets */,
 				EA10B2CB28F3604100C28E95 /* Preview Content */,
 			);
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA10B2D528F3612600C28E95 /* ShoppingList.xcdatamodeld in Sources */,
 				EA10B2C828F3603F00C28E95 /* ContentView.swift in Sources */,
 				EA10B2C628F3603F00C28E95 /* ShoppingListCD2App.swift in Sources */,
 			);
@@ -339,6 +343,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		EA10B2D328F3612600C28E95 /* ShoppingList.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				EA10B2D428F3612600C28E95 /* ShoppingList.xcdatamodel */,
+			);
+			currentVersion = EA10B2D428F3612600C28E95 /* ShoppingList.xcdatamodel */;
+			path = ShoppingList.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = EA10B2BA28F3603F00C28E95 /* Project object */;
 }
