@@ -23,6 +23,8 @@ struct EditItemView: View {
         _unit = State(wrappedValue: item.itemUnit)
         _quantity = State(wrappedValue: Int(item.quantity))
         _toBuy = State(wrappedValue: item.toBuy)
+        
+        //TODO: need to be able to change the label that this belongs too as well
     }
     
     var body: some View {

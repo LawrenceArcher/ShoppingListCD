@@ -27,6 +27,17 @@ struct ItemListView: View {
                 ForEach(items.wrappedValue) { item in
                     ItemRowView(item: item)
                 }
+                //TODO: need to figure out the delete process here
+                Button {
+                    withAnimation {
+                        let item = Item(context: moc)
+                        item.createdAt = Date()
+                        dataController.save()
+                    }
+                } label: {
+                    Text("Add new item")
+                    //TODO: this doesn't actually seem to work. Why?
+                }
             }
         }
     }
