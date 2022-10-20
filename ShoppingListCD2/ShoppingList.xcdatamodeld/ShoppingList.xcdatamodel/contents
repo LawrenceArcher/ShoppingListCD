@@ -9,7 +9,7 @@
         <relationship name="label" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Label" inverseName="items" inverseEntity="Label"/>
     </entity>
     <entity name="Label" representedClassName="Label" syncable="YES" codeGenerationType="class">
-        <attribute name="color" optional="YES" attributeType="String"/>
+        <attribute name="colour" optional="YES" attributeType="String"/>
         <attribute name="name" optional="YES" attributeType="String"/>
         <relationship name="items" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Item" inverseName="label" inverseEntity="Item"/>
     </entity>

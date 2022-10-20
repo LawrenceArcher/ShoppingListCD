@@ -45,7 +45,7 @@ class DataController: ObservableObject {
         for i in 1...5 {
             let label = Label(context: viewContext)
             label.name = "Label \(i)"
-            label.color = colors[i - 1]
+            label.colour = colors[i - 1]
             
             for j in 1...5 {
                 let item = Item(context: viewContext)
