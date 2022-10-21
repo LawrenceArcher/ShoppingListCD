@@ -40,6 +40,10 @@ struct AddItemView: View {
                                 .onTapGesture {
                                     itemLabel = item
                                 }
+                            if item == itemLabel {
+                                Image(systemName: "checkmark.circle")
+                                    .foregroundColor(.black)
+                            }
                         }
                     }
                 }
