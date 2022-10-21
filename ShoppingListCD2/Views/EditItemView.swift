@@ -43,7 +43,7 @@ struct EditItemView: View {
     }
     
     func update() {
-        item.label?.objectWillChange.send()
+        item.itemLabel?.objectWillChange.send()
         
         item.name = name
         item.quantity = Int16(quantity)

@@ -7,17 +7,18 @@
 
 import SwiftUI
 
-struct LabelView: View {
-    let label: Label
+struct ItemLabelView: View {
+    let itemLabel: ItemLabel
     
     var body: some View {
         ZStack (alignment: .center) {
-            Text(label.labelName)
+            Text(itemLabel.labelName)
                 .frame(height: 50)
                 .padding(.horizontal, 10)
-                .background(Color(label.labelColour))
+                .background(Color(itemLabel.labelColour))
             // TODO: Ensure that this changes when clicked & explain which label is currently selected
                 .cornerRadius(15)
+                .foregroundColor(Color.black)
             // TODO: If text colour doesn't work with background, need to catch + change!
         }
     }
@@ -25,6 +26,6 @@ struct LabelView: View {
 
 struct LabelView_Previews: PreviewProvider {
     static var previews: some View {
-        LabelView(label: Label.example)
+        ItemLabelView(itemLabel: ItemLabel.example)
     }
 }

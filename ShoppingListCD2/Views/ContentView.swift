@@ -8,12 +8,15 @@
 import SwiftUI
 
 struct ContentView: View {
-    let labels: FetchRequest<Label>
+    let itemLabels: FetchRequest<ItemLabel>
     @State private var selectedFilter = "*"
     @State private var showItemsToBuy = true
+    @State private var showingAddLabel = false
+    
+    @EnvironmentObject var dataController: DataController
     
     init() {
-        labels = FetchRequest<Label>(entity: Label.entity(), sortDescriptors: [NSSortDescriptor(keyPath: \Label.name, ascending: true)])
+        itemLabels = FetchRequest<ItemLabel>(entity: ItemLabel.entity(), sortDescriptors: [NSSortDescriptor(keyPath: \ItemLabel.name, ascending: true)])
     }
     
     var body: some View {
@@ -22,18 +25,22 @@ struct ContentView: View {
                 ItemListView(showItemsToBuy: showItemsToBuy, selectedFilter: selectedFilter)
                 ScrollView (.horizontal) {
                     HStack {
-                        ForEach(labels.wrappedValue) { label in
+                        ForEach(itemLabels.wrappedValue) { itemLabel in
                             Button {
-                                selectedFilter = label.labelName
+                                selectedFilter = itemLabel.labelName
                             } label: {
-                                LabelView(label: label)
+                                ItemLabelView(itemLabel: itemLabel)
                             }
+                        }
+                        Button("Add new Label") {
+                            showingAddLabel.toggle()
                         }
                     }
                 }
             }
-            .navigationTitle("The best motherfucking shopping list")
-            
+        }
+        .sheet(isPresented: $showingAddLabel) {
+            AddLabelView()
         }
     }
 }

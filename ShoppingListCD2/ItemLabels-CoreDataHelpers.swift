@@ -7,7 +7,7 @@
 
 import Foundation
 
-extension Label {
+extension ItemLabel {
     static let colours = ["Pink", "Purple", "Red", "Orange", "Gold", "Green", "Teal", "Light Blue", "Dark Blue", "Midnight", "Dark Grey", "Grey"]
     
     var labelName: String {
@@ -18,18 +18,14 @@ extension Label {
         colour ?? "Light Blue"
     }
     
-//    var labelItems: [Item] {
-////        let itemsArray = items?.allObjects as? [Item] ?? []
-//    }
-    
-    static var example: Label {
+    static var example: ItemLabel {
         let controller = DataController(inMemory: true)
         let viewContext = controller.container.viewContext
         
-        let label = Label(context: viewContext)
-        label.name = "marmite"
-        label.colour = "Light Blue"
+        let itemLabel = ItemLabel(context: viewContext)
+        itemLabel.name = "marmite"
+        itemLabel.colour = "Light Blue"
         
-        return label
+        return itemLabel
     }
 }

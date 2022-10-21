@@ -43,16 +43,16 @@ class DataController: ObservableObject {
         let colors = ["Red", "Blue", "Green", "Brown", "White"]
         
         for i in 1...5 {
-            let label = Label(context: viewContext)
-            label.name = "Label \(i)"
-            label.colour = colors[i - 1]
+            let itemLabel = ItemLabel(context: viewContext)
+            itemLabel.name = "Label \(i)"
+            itemLabel.colour = colors[i - 1]
             
             for j in 1...5 {
                 let item = Item(context: viewContext)
                 item.name = "Item \(j)"
                 item.createdAt = Date()
                 item.toBuy = Bool.random()
-                item.label = label
+                item.itemLabel = itemLabel
                 item.quantity = 5
                 item.unit = "lbs"
             }
@@ -76,7 +76,7 @@ class DataController: ObservableObject {
         let batchDeleteRequest1 = NSBatchDeleteRequest(fetchRequest: fetchRequest1)
         _ = try? container.viewContext.execute(batchDeleteRequest1)
         
-        let fetchRequest2: NSFetchRequest<NSFetchRequestResult> = Label.fetchRequest()
+        let fetchRequest2: NSFetchRequest<NSFetchRequestResult> = ItemLabel.fetchRequest()
         let batchDeleteRequest2 = NSBatchDeleteRequest(fetchRequest: fetchRequest2)
         _ = try? container.viewContext.execute(batchDeleteRequest2)
     }

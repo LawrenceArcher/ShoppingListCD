@@ -13,11 +13,12 @@
 		EA10B2CD28F3604100C28E95 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA10B2CC28F3604100C28E95 /* Preview Assets.xcassets */; };
 		EA10B2D528F3612600C28E95 /* ShoppingList.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EA10B2D328F3612600C28E95 /* ShoppingList.xcdatamodeld */; };
 		EA10B2D728F3666E00C28E95 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA10B2D628F3666E00C28E95 /* DataController.swift */; };
-		EA10B2D928F3F69900C28E95 /* LabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA10B2D828F3F69900C28E95 /* LabelView.swift */; };
+		EA10B2D928F3F69900C28E95 /* ItemLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA10B2D828F3F69900C28E95 /* ItemLabelView.swift */; };
 		EA10B2DB28F3F87600C28E95 /* Item-CoreDataHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA10B2DA28F3F87600C28E95 /* Item-CoreDataHelpers.swift */; };
-		EA10B2DD28F3F9D300C28E95 /* Labels-CoreDataHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA10B2DC28F3F9D300C28E95 /* Labels-CoreDataHelpers.swift */; };
+		EA10B2DD28F3F9D300C28E95 /* ItemLabels-CoreDataHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA10B2DC28F3F9D300C28E95 /* ItemLabels-CoreDataHelpers.swift */; };
 		EAF3A3A92901702B0011D8AC /* Colours.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EAF3A3A82901702B0011D8AC /* Colours.xcassets */; };
 		EAF3A3AB2901C8DC0011D8AC /* AddItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF3A3AA2901C8DC0011D8AC /* AddItemView.swift */; };
+		EAF3A3AD290281910011D8AC /* AddLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF3A3AC290281910011D8AC /* AddLabelView.swift */; };
 		EAFBC29E28F751F200ABDE44 /* ItemListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAFBC29D28F751F200ABDE44 /* ItemListView.swift */; };
 		EAFBC2A128F7E44F00ABDE44 /* ItemRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAFBC2A028F7E44F00ABDE44 /* ItemRowView.swift */; };
 		EAFBC2A328F7E52500ABDE44 /* EditItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAFBC2A228F7E52500ABDE44 /* EditItemView.swift */; };
@@ -31,11 +32,12 @@
 		EA10B2CC28F3604100C28E95 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		EA10B2D428F3612600C28E95 /* ShoppingList.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ShoppingList.xcdatamodel; sourceTree = "<group>"; };
 		EA10B2D628F3666E00C28E95 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
-		EA10B2D828F3F69900C28E95 /* LabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelView.swift; sourceTree = "<group>"; };
+		EA10B2D828F3F69900C28E95 /* ItemLabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemLabelView.swift; sourceTree = "<group>"; };
 		EA10B2DA28F3F87600C28E95 /* Item-CoreDataHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Item-CoreDataHelpers.swift"; sourceTree = "<group>"; };
-		EA10B2DC28F3F9D300C28E95 /* Labels-CoreDataHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Labels-CoreDataHelpers.swift"; sourceTree = "<group>"; };
+		EA10B2DC28F3F9D300C28E95 /* ItemLabels-CoreDataHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ItemLabels-CoreDataHelpers.swift"; sourceTree = "<group>"; };
 		EAF3A3A82901702B0011D8AC /* Colours.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colours.xcassets; sourceTree = "<group>"; };
 		EAF3A3AA2901C8DC0011D8AC /* AddItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemView.swift; sourceTree = "<group>"; };
+		EAF3A3AC290281910011D8AC /* AddLabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLabelView.swift; sourceTree = "<group>"; };
 		EAFBC29D28F751F200ABDE44 /* ItemListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListView.swift; sourceTree = "<group>"; };
 		EAFBC2A028F7E44F00ABDE44 /* ItemRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemRowView.swift; sourceTree = "<group>"; };
 		EAFBC2A228F7E52500ABDE44 /* EditItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditItemView.swift; sourceTree = "<group>"; };
@@ -76,7 +78,7 @@
 				EA10B2D328F3612600C28E95 /* ShoppingList.xcdatamodeld */,
 				EA10B2D628F3666E00C28E95 /* DataController.swift */,
 				EA10B2DA28F3F87600C28E95 /* Item-CoreDataHelpers.swift */,
-				EA10B2DC28F3F9D300C28E95 /* Labels-CoreDataHelpers.swift */,
+				EA10B2DC28F3F9D300C28E95 /* ItemLabels-CoreDataHelpers.swift */,
 				EA10B2C928F3604100C28E95 /* Assets.xcassets */,
 				EAF3A3A82901702B0011D8AC /* Colours.xcassets */,
 				EA10B2CB28F3604100C28E95 /* Preview Content */,
@@ -96,10 +98,11 @@
 			isa = PBXGroup;
 			children = (
 				EA10B2C728F3603F00C28E95 /* ContentView.swift */,
-				EA10B2D828F3F69900C28E95 /* LabelView.swift */,
+				EA10B2D828F3F69900C28E95 /* ItemLabelView.swift */,
 				EAFBC29D28F751F200ABDE44 /* ItemListView.swift */,
 				EAFBC2A028F7E44F00ABDE44 /* ItemRowView.swift */,
 				EAF3A3AA2901C8DC0011D8AC /* AddItemView.swift */,
+				EAF3A3AC290281910011D8AC /* AddLabelView.swift */,
 				EAFBC2A228F7E52500ABDE44 /* EditItemView.swift */,
 			);
 			path = Views;
@@ -177,10 +180,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA10B2D528F3612600C28E95 /* ShoppingList.xcdatamodeld in Sources */,
-				EA10B2D928F3F69900C28E95 /* LabelView.swift in Sources */,
+				EA10B2D928F3F69900C28E95 /* ItemLabelView.swift in Sources */,
 				EAFBC2A128F7E44F00ABDE44 /* ItemRowView.swift in Sources */,
-				EA10B2DD28F3F9D300C28E95 /* Labels-CoreDataHelpers.swift in Sources */,
+				EA10B2DD28F3F9D300C28E95 /* ItemLabels-CoreDataHelpers.swift in Sources */,
 				EA10B2D728F3666E00C28E95 /* DataController.swift in Sources */,
+				EAF3A3AD290281910011D8AC /* AddLabelView.swift in Sources */,
 				EA10B2C828F3603F00C28E95 /* ContentView.swift in Sources */,
 				EA10B2C628F3603F00C28E95 /* ShoppingListCD2App.swift in Sources */,
 				EAFBC2A328F7E52500ABDE44 /* EditItemView.swift in Sources */,

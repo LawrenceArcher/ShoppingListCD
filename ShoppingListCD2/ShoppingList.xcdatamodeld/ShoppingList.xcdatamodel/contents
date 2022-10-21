@@ -6,11 +6,11 @@
         <attribute name="quantity" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="toBuy" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
         <attribute name="unit" optional="YES" attributeType="String"/>
-        <relationship name="label" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Label" inverseName="items" inverseEntity="Label"/>
+        <relationship name="itemLabel" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ItemLabel" inverseName="items" inverseEntity="ItemLabel"/>
     </entity>
-    <entity name="Label" representedClassName="Label" syncable="YES" codeGenerationType="class">
+    <entity name="ItemLabel" representedClassName="ItemLabel" syncable="YES" codeGenerationType="class">
         <attribute name="colour" optional="YES" attributeType="String"/>
         <attribute name="name" optional="YES" attributeType="String"/>
-        <relationship name="items" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Item" inverseName="label" inverseEntity="Item"/>
+        <relationship name="items" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Item" inverseName="itemLabel" inverseEntity="Item"/>
     </entity>
 </model>

@@ -43,7 +43,9 @@ struct ItemListView: View {
             .sheet(isPresented: $showingAddItem) {
                 AddItemView()
             }
+            .navigationTitle("The best motherfucking shopping list")
         }
+        
         
     }
 }
