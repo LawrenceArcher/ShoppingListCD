@@ -17,17 +17,23 @@ struct ContentView: View {
     }
     
     var body: some View {
-        ItemListView(showItemsToBuy: showItemsToBuy, selectedFilter: selectedFilter)
-        ScrollView (.horizontal) {
-            HStack {
-                ForEach(labels.wrappedValue) { label in
-                    Button {
-                        selectedFilter = label.labelName
-                    } label: {
-                        LabelView(label: label)
+        NavigationView {
+            VStack {
+                ItemListView(showItemsToBuy: showItemsToBuy, selectedFilter: selectedFilter)
+                ScrollView (.horizontal) {
+                    HStack {
+                        ForEach(labels.wrappedValue) { label in
+                            Button {
+                                selectedFilter = label.labelName
+                            } label: {
+                                LabelView(label: label)
+                            }
+                        }
                     }
                 }
             }
+            .navigationTitle("The best motherfucking shopping list")
+            
         }
     }
 }
