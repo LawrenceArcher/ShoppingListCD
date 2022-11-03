@@ -25,9 +25,21 @@ struct ContentView: View {
                 ItemListView(showItemsToBuy: showItemsToBuy, selectedFilter: selectedFilter)
                 ScrollView (.horizontal) {
                     HStack {
+                        Button {
+                            selectedFilter = "*"
+                        } label: {
+                            ZStack (alignment: .center) {
+                                Text("Everything")
+                                    .frame(height: 50)
+                                    .padding(.horizontal, 10)
+                                    .background(Color.white)
+                                    .cornerRadius(15)
+                                    .foregroundColor(Color.black)
+                            }
+                        }
                         ForEach(itemLabels.wrappedValue) { itemLabel in
                             Button {
-                                selectedFilter = itemLabel.labelName
+                                selectedFilter = String(itemLabel.labelName)
                             } label: {
                                 ItemLabelView(itemLabel: itemLabel)
                             }

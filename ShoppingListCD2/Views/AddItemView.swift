@@ -18,6 +18,7 @@ struct AddItemView: View {
     @State private var quantity = 1
     @State private var unit = ""
     @State private var itemLabel: ItemLabel?
+    @State private var itemLabelName = ""
     
     init() {
         itemLabels = FetchRequest<ItemLabel>(entity: ItemLabel.entity(), sortDescriptors: [NSSortDescriptor(keyPath: \ItemLabel.name, ascending: true)])
@@ -39,6 +40,7 @@ struct AddItemView: View {
                                 .foregroundColor(Color(item.labelColour))
                                 .onTapGesture {
                                     itemLabel = item
+                                    itemLabelName = item.labelName
                                 }
                             if item == itemLabel {
                                 Image(systemName: "checkmark.circle")
@@ -55,6 +57,7 @@ struct AddItemView: View {
                         item.unit = unit
                         item.createdAt = Date()
                         item.toBuy = true
+                        item.labelName = itemLabelName
                         
                         dataController.save()
                         dismiss()

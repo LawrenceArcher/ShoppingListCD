@@ -21,9 +21,17 @@ struct ItemListView: View {
         self.showItemsToBuy = showItemsToBuy
         self.selectedFilter = selectedFilter
         
+//        let toBuyPredicate = NSPredicate(format: "toBuy = %@", showItemsToBuy)
+//        let itemLabelPredicate = NSPredicate(format: "label LIKE[c] %@", selectedFilter)
+        
+//        let compoundPredicate = NSCompoundPredicate(type: NSCompoundPredicate(type: .and, subpredicates: [toBuyPredicate, itemLabelPredicate]))
+        // TODO: why doesn't this work?
+        
+        
         items = FetchRequest<Item>(entity: Item.entity(), sortDescriptors: [
             NSSortDescriptor(keyPath: \Item.createdAt, ascending: false)
-        ], predicate: NSPredicate(format: "toBuy = %d", showItemsToBuy))
+        ], predicate: NSPredicate(format: "labelName LIKE[c] %@ AND toBuy = true", selectedFilter))
+        //TODO: add ability to toggle toBuy and predicate here
     }
     
     var body: some View {

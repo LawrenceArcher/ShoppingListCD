@@ -20,6 +20,10 @@ extension Item {
         unit ?? ""
     }
     
+    var itemLabelName: String {
+        itemLabel?.labelName ?? ""
+    }
+    
     static var example : Item {
         let controller = DataController(inMemory: true)
         let viewContext = controller.container.viewContext
