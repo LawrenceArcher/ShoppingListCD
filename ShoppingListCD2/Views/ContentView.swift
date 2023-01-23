@@ -29,7 +29,7 @@ struct ContentView: View {
                             selectedFilter = "*"
                         } label: {
                             ZStack (alignment: .center) {
-                                Text("Everything")
+                                Text("All")
                                     .frame(height: 50)
                                     .padding(.horizontal, 10)
                                     .background(Color.white)
