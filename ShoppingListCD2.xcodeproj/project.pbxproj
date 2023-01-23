@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EA030F46292001B400FD1C9D /* EditLabelsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA030F45292001B400FD1C9D /* EditLabelsView.swift */; };
+		EA030F482923811800FD1C9D /* EditLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA030F472923811800FD1C9D /* EditLabelView.swift */; };
+		EA030F4A2923851A00FD1C9D /* Binding-OnChange.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA030F492923851A00FD1C9D /* Binding-OnChange.swift */; };
 		EA10B2C628F3603F00C28E95 /* ShoppingListCD2App.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA10B2C528F3603F00C28E95 /* ShoppingListCD2App.swift */; };
 		EA10B2C828F3603F00C28E95 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA10B2C728F3603F00C28E95 /* ContentView.swift */; };
 		EA10B2CA28F3604100C28E95 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA10B2C928F3604100C28E95 /* Assets.xcassets */; };
@@ -25,6 +28,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EA030F45292001B400FD1C9D /* EditLabelsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditLabelsView.swift; sourceTree = "<group>"; };
+		EA030F472923811800FD1C9D /* EditLabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditLabelView.swift; sourceTree = "<group>"; };
+		EA030F492923851A00FD1C9D /* Binding-OnChange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Binding-OnChange.swift"; sourceTree = "<group>"; };
 		EA10B2C228F3603F00C28E95 /* ShoppingListCD2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShoppingListCD2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA10B2C528F3603F00C28E95 /* ShoppingListCD2App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingListCD2App.swift; sourceTree = "<group>"; };
 		EA10B2C728F3603F00C28E95 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -77,6 +83,7 @@
 				EAFBC2A428F7E7C000ABDE44 /* Views */,
 				EA10B2D328F3612600C28E95 /* ShoppingList.xcdatamodeld */,
 				EA10B2D628F3666E00C28E95 /* DataController.swift */,
+				EA030F492923851A00FD1C9D /* Binding-OnChange.swift */,
 				EA10B2DA28F3F87600C28E95 /* Item-CoreDataHelpers.swift */,
 				EA10B2DC28F3F9D300C28E95 /* ItemLabels-CoreDataHelpers.swift */,
 				EA10B2C928F3604100C28E95 /* Assets.xcassets */,
@@ -102,8 +109,10 @@
 				EAFBC29D28F751F200ABDE44 /* ItemListView.swift */,
 				EAFBC2A028F7E44F00ABDE44 /* ItemRowView.swift */,
 				EAF3A3AA2901C8DC0011D8AC /* AddItemView.swift */,
-				EAF3A3AC290281910011D8AC /* AddLabelView.swift */,
 				EAFBC2A228F7E52500ABDE44 /* EditItemView.swift */,
+				EA030F45292001B400FD1C9D /* EditLabelsView.swift */,
+				EA030F472923811800FD1C9D /* EditLabelView.swift */,
+				EAF3A3AC290281910011D8AC /* AddLabelView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -179,14 +188,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA030F46292001B400FD1C9D /* EditLabelsView.swift in Sources */,
 				EA10B2D528F3612600C28E95 /* ShoppingList.xcdatamodeld in Sources */,
 				EA10B2D928F3F69900C28E95 /* ItemLabelView.swift in Sources */,
 				EAFBC2A128F7E44F00ABDE44 /* ItemRowView.swift in Sources */,
 				EA10B2DD28F3F9D300C28E95 /* ItemLabels-CoreDataHelpers.swift in Sources */,
 				EA10B2D728F3666E00C28E95 /* DataController.swift in Sources */,
 				EAF3A3AD290281910011D8AC /* AddLabelView.swift in Sources */,
+				EA030F482923811800FD1C9D /* EditLabelView.swift in Sources */,
 				EA10B2C828F3603F00C28E95 /* ContentView.swift in Sources */,
 				EA10B2C628F3603F00C28E95 /* ShoppingListCD2App.swift in Sources */,
+				EA030F4A2923851A00FD1C9D /* Binding-OnChange.swift in Sources */,
 				EAFBC2A328F7E52500ABDE44 /* EditItemView.swift in Sources */,
 				EAF3A3AB2901C8DC0011D8AC /* AddItemView.swift in Sources */,
 				EA10B2DB28F3F87600C28E95 /* Item-CoreDataHelpers.swift in Sources */,

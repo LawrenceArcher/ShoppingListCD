@@ -44,14 +44,22 @@ struct ItemListView: View {
                 Button {
                     showingAddItem.toggle()
                 } label: {
-                    Text("Add new item")
-                    //TODO: this doesn't actually seem to work. Why?
+                    HStack {
+                        Image(systemName: "square")
+                            .foregroundColor(.clear)
+                        Text("Add new item")
+                    }
                 }
             }
             .sheet(isPresented: $showingAddItem) {
                 AddItemView()
             }
-            .navigationTitle("The best motherfucking shopping list")
+            .navigationBarTitle("Shopping")
+            .toolbar {
+                NavigationLink(destination: EditLabelsView()) {
+                    Label("Edit Labels", systemImage: "gear")
+                }
+            }
         }
         
         
