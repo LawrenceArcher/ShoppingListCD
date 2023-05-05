@@ -50,9 +50,16 @@ struct ContentView: View {
                     }
                 }
             }
+            .navigationBarTitle("Shopping")
+            .toolbar {
+                NavigationLink(destination: EditLabelsView()) {
+                    Label("Edit Labels", systemImage: "gear")
+                }
+            }
         }
         .sheet(isPresented: $showingAddLabel) {
             AddLabelView()
+            
         }
     }
 }

@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import CoreData
 
 struct AddItemView: View {
     @EnvironmentObject var dataController: DataController
@@ -13,6 +14,7 @@ struct AddItemView: View {
     @Environment(\.dismiss) var dismiss
     
     let itemLabels: FetchRequest<ItemLabel>
+    let items: FetchRequest<Item>
     
     @State private var name = ""
     @State private var quantity = 1
@@ -22,6 +24,7 @@ struct AddItemView: View {
     
     init() {
         itemLabels = FetchRequest<ItemLabel>(entity: ItemLabel.entity(), sortDescriptors: [NSSortDescriptor(keyPath: \ItemLabel.name, ascending: true)])
+        items = FetchRequest<Item>(entity: Item.entity(), sortDescriptors: [])
     }
     
     var body: some View {
@@ -51,16 +54,56 @@ struct AddItemView: View {
                 }
                 Section {
                     Button("Save") {
-                        let item = Item(context: moc)
-                        item.name = name
-                        item.quantity = Int16(quantity)
-                        item.unit = unit
-                        item.createdAt = Date()
-                        item.toBuy = true
-                        item.labelName = itemLabelName
+                        var itemAlreadyInList = false
+                        // if name already in item list add quantity
+                        items.wrappedValue.forEach { item in
+                            if item.name == name {
+                                itemAlreadyInList = true
+                            }
+                        }
                         
-                        dataController.save()
-                        dismiss()
+                        if itemAlreadyInList {
+                            // select item from memory
+                            print("I'm already in here!")
+                            
+                            let fetchRequest: NSFetchRequest<Item>
+                            fetchRequest = Item.fetchRequest()
+                            
+                            fetchRequest.predicate = NSPredicate(
+                                format: "name LIKE %@", name
+                            )
+                            
+                            do {
+                                let itemToChange = try moc.fetch(fetchRequest)
+                                // add new quantity to existing value
+                                print(itemToChange)
+                                itemToChange.first!.quantity += Int16(quantity)
+                            } catch {
+                                print("couldn't find item")
+                            }
+                            
+                            dataController.save()
+                            dismiss()
+                            // item check to happen here.
+                            
+                            // start by checking for the existence of the item in the existing "active" list
+                            
+                            // if it exists then increase the amount of the label
+                            
+                            // add an option to request a merge if there's a different unit
+                            
+                        } else {
+                            let item = Item(context: moc)
+                            item.name = name
+                            item.quantity = Int16(quantity)
+                            item.unit = unit
+                            item.createdAt = Date()
+                            item.toBuy = true
+                            item.labelName = itemLabelName
+                            
+                            dataController.save()
+                            dismiss()
+                        }
                     }
                 }
             }

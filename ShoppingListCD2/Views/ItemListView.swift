@@ -54,12 +54,8 @@ struct ItemListView: View {
             .sheet(isPresented: $showingAddItem) {
                 AddItemView()
             }
-            .navigationBarTitle("Shopping")
-            .toolbar {
-                NavigationLink(destination: EditLabelsView()) {
-                    Label("Edit Labels", systemImage: "gear")
-                }
-            }
+            
+            
         }
         
         
